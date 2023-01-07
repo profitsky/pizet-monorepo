@@ -1,14 +1,13 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "."
+    "rootDir": "src"
   },
   "include": [
-    "./vite.config.ts",
-    "./.storybook/*"
+    "src",
+    "./vite.config.ts"
   ],
   "exclude": [
-    ".storybook-static",
     "node_modules",
     "dist"
   ],

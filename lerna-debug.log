@@ -1,0 +1,17 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   globs: [ 'to', 'component-library' ],
+0 silly argv   lernaVersion: '6.4.0',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   pkg: '@core-library'
+0 silly argv }
+1 notice cli v6.4.0
+2 verbose rootPath D:\Projekty\pi-zet-monorepo
+3 info versioning independent
+4 error Error: Invalid package name "@core-library": name can only contain URL-friendly characters
+4 error     at invalidPackageName (D:\Projekty\pi-zet-monorepo\node_modules\npm-package-arg\npa.js:89:15)
+4 error     at Result.setName (D:\Projekty\pi-zet-monorepo\node_modules\npm-package-arg\npa.js:124:11)
+4 error     at new Result (D:\Projekty\pi-zet-monorepo\node_modules\npm-package-arg\npa.js:114:23)
+4 error     at Function.resolve (D:\Projekty\pi-zet-monorepo\node_modules\npm-package-arg\npa.js:61:15)
+4 error     at new Package (D:\Projekty\pi-zet-monorepo\node_modules\@lerna\package\index.js:94:26)
+4 error     at D:\Projekty\pi-zet-monorepo\node_modules\@lerna\project\index.js:280:26

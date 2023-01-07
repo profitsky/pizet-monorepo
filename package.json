@@ -1,10 +1,46 @@
 {
-  "name": "root",
+  "name": "pi-zet-monorepo",
   "private": true,
+  "description": "root for pi-zet-monorepo",
   "workspaces": [
-    "packages/*"
+    "packages/component-library/",
+    "packages/component-library/core-library/",
+    "packages/sentence-me-front-end/"
   ],
+  "scripts": {
+    "generate:file": "plop",
+    "preinstall": "npx only-allow yarn",
+    "postinstall": "sort-package-json"
+  },
   "devDependencies": {
-    "lerna": "^6.4.0"
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^26.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-storybook": "^0.6.8",
+    "husky": "^8.0.3",
+    "lerna": "^6.4.0",
+    "lint-staged": "^13.1.0",
+    "plop": "^3.1.1",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "^2.8.1",
+    "sort-package-json": "^2.1.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^29.0.0",
+    "typescript": "*"
   }
 }

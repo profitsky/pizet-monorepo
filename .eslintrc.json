@@ -1,0 +1,192 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        }
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 0
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 140,
+        "ignorePattern": "d=\"([\\s\\S]*?)\"",
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error",
+    "simple-import-sort/imports": "off",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function"
+        // 'function-declaration' | 'function-expression' | 'arrow-function'
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "@typescript-eslint/quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.stories.tsx",
+        "*.styled.ts",
+        "*.types.ts",
+        "index.ts",
+        "*.globalStyle.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    },
+    {
+      "files": [
+        "*.d.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/no-empty-interface": "off"
+      }
+    },
+    {
+      "files": [
+        "**/vite.config.ts",
+        "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
+        "*.test.@(ts|tsx|js|jsx|mjs|cjs)"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "import/no-default-export": "off",
+        "storybook/hierarchy-separator": "error",
+        "storybook/default-exports": "off"
+      }
+    },
+    {
+      "files": [
+        "src/**/*.{js,jsx,ts,tsx}"
+      ],
+      "rules": {
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "parent",
+              "sibling",
+              "index",
+              "object",
+              "type"
+            ],
+            "alphabetize": {
+              "order": "asc"
+            },
+            "newlines-between": "always"
+          }
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}

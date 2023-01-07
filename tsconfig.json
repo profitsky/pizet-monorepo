@@ -1,0 +1,72 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "incremental": true,
+    "composite": true,
+    "tsBuildInfoFile": "./tsCompilationLog.tsbuildinfo",
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "useDefineForClassFields": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "types": [
+      "jest, node"
+    ],
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "sourceRoot": "src",
+    "noEmitOnError": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@component-library": [
+        "packages/component-library/src/*"
+      ],
+      "@component-core-library": [
+        "packages/component-library/core-library/src/*"
+      ],
+      "@sentence-me-front-end/*": [
+        "packages/sentence-me-front-end/src/*"
+      ]
+    }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./packages/component-library/tsconfig.json"
+    },
+    {
+      "path": "./packages/component-library/core-library/tsconfig.json"
+    },
+    {
+      "path": "./packages/sentence-me-front-end/tsconfig.json"
+    }
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
