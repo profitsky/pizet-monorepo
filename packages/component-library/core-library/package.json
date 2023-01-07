@@ -21,9 +21,6 @@
     "type": "git",
     "url": "git+https://github.com/profitsky/pizet-monorepo.git"
   },
-  "scripts": {
-    "test": "node __tests__/libA.test.js"
-  },
   "bugs": {
     "url": "https://github.com/profitsky/pizet-monorepo/issues"
   },
